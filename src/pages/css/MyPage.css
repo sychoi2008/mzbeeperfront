@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+}
+
+.mypage_msg_area {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+ul > li {
+  cursor: pointer;
+  padding-bottom: 50px;
+}
+
+.logout_btn {
+  color: red;
+}

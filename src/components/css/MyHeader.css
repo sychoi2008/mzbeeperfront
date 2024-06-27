@@ -1,0 +1,78 @@
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+}
+
+header > div {
+  display: flex;
+}
+
+header .text_center {
+  width: 55%;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+header .back_show {
+  width: 20%;
+  justify-content: start;
+  margin-left: 10px;
+}
+
+header .text_start {
+  width: 75%;
+  justify-content: start;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.menu_btn {
+  width: 25%;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.back_real {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu_real {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #d9d9d9;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  /* padding-top: 20px; */
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  list-style-type: none;
+  margin: 0px;
+}
+
+nav > ul > li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+span {
+  font-size: 25px;
+  font-weight: bold;
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+
+/* App의 밖의 부분 */
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: centers;
+  /* font-family: "Gowun Batang", serif; */
+  min-height: 100vh; /* 웹스크린의 실제 크기의 100%를 최소 높이로 갖겠다 */
+  margin: 0px; /*html body 태그에는 기본적으로 margin이 있어 없애줌 */
+  /* overflow: hidden;  */
+  /* 사이드 바의 height에 의해 스크롤바가 생성되기 때문*/
+}
+
+#root {
+  background: linear-gradient(#f9e7f3, #c1f3fe);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
+  /* 기본적으로 화면 100%를 차지하는 높이 */
+  min-height: 100vh;
+  min-width: 400px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}

@@ -1,0 +1,34 @@
+.explain_input {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.input_area {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dict_input {
+  background-color: #56972e;
+  border: none;
+  height: 40px;
+  width: 240px;
+}
+
+.dict_btn {
+  background-color: #080f6a;
+  color: white;
+  height: 40px;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.dict_img {
+  font-size: 30px;
+  padding-top: 5px;
+}

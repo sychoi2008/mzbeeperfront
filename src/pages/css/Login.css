@@ -1,0 +1,90 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home_title {
+  margin-top: 80px;
+}
+
+.home_title > h2 {
+  /* text-align: center; */
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.home_title > .beeper_img {
+  width: 250px;
+}
+
+.id_pwd_boxes {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.input_id_box {
+  margin-bottom: 20px;
+}
+
+.input_id_box > input {
+  border: none;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+  width: 190px;
+  height: 50px;
+  font-size: large;
+}
+
+.input_id_box > span {
+  /* margin-left: 20px; */
+  margin-right: 40px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-weight: bold;
+}
+
+.input_pwd_box > input {
+  border: none;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+  width: 190px;
+  height: 50px;
+  font-size: large;
+}
+
+.input_pwd_box > span {
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.register_login_btn {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.register_login_btn > button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #080f6a;
+  color: white;
+
+  cursor: pointer;
+  width: 130px;
+  height: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+}

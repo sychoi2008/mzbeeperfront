@@ -1,0 +1,28 @@
+{
+  "MySendMsg": [
+    {
+      "id": 1,
+      "sendTime": "2024.02.01",
+      "receiver": "012-111-3333",
+      "sendMsg": "8282"
+    },
+    {
+      "id": 2,
+      "sendTime": "2024.02.24",
+      "receiver": "012-111-3333",
+      "sendMsg": "045"
+    },
+    {
+      "id": 3,
+      "sendTime": "2024.03.01",
+      "receiver": "012-111-3333",
+      "sendMsg": "1472"
+    },
+    {
+      "id": 4,
+      "sendTime": "2024.03.02",
+      "receiver": "012-111-3333",
+      "sendMsg": "1750"
+    }
+  ]
+}

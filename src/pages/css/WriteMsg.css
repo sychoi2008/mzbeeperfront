@@ -1,0 +1,105 @@
+.title_input_dial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.num_title > h2 {
+  font-size: 30px;
+}
+
+/* */
+.msg_input {
+  background-color: #56972e;
+  border: none;
+  height: 40px;
+  width: 250px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.dial_buts {
+  display: flex;
+  flex-direction: column;
+}
+
+.dial_buts > div > div > button {
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+}
+
+.oneTothree > button,
+.fourTosix > button,
+.sevenTonine > button,
+.starToShap > button {
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.oneTothree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.fourTosix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.sevenTonine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.starToShap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.next_cancel_btn {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.send_cancle_btn {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+  width: 130px;
+  height: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+}
+
+.direct_btn {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #080f6a;
+  color: white;
+
+  cursor: pointer;
+  width: 130px;
+  height: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 5px 5px 0px;
+}
