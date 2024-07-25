@@ -14,6 +14,8 @@ import MySendMsg from "./pages/MySendMsg.js";
 import MyGetMsg from "./pages/MyGetMsg.js";
 import WriteMsg from "./pages/WriteMsg.js";
 
+import Error from "./pages/Error.js";
+
 function App() {
   return (
     <BrowserRouter>
@@ -36,6 +38,10 @@ function App() {
         <Routes>
           <Route path="/mzbeeper/mypage/mysendmsg" element={<MySendMsg />} />
           <Route path="/mzbeeper/mypage/mygetmsg" element={<MyGetMsg />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/mzbeeper/error" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>

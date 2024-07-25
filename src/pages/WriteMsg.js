@@ -4,11 +4,14 @@ import MyHeader from "../components/MyHeader";
 import "./css/WriteMsg.css";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import moment from "moment";
+import "moment/locale/ko";
+import api from "../utils/api";
 
 const WriteMsg = () => {
   // https://9x211x2.tistory.com/22
   const { state } = useLocation();
-  console.log(state);
+  console.log("WirteNum.js에서 넘어옴 : " + state);
   const [inputNum, setInputNum] = useState("");
 
   // 버튼을 누르면 숫자가 input 창에 띌
@@ -20,22 +23,30 @@ const WriteMsg = () => {
   const onMsgSubmit = () => {
     // jwt token과 함께 보내기
     // 실패하면 로그인 화면(첫화면)으로 강제로 보내기
-    // axios
-    //   .post("http://localhost:8080/mzbeeper/send/msg", {
-    //     userId: loginId,
-    //     userPwd: loginPwd,
-    //   })
-    //   .then((response) => {
-    //     console.log(response);
-    //     // https://developer-ping9.tistory.com/235
-    //     console.log("accessToken", response.headers.accesstoken);
-    //     localStorage.setItem("accessToken", response.headers.accesstoken);
-    //     localStorage.setItem("refreshToken", response.headers.refreshtoken);
-    //     window.location.href = "/mybeeper";
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    api
+      .post(
+        "http://localhost:8080/mzbeeper/send/msg",
+        {
+          msg: inputNum,
+          readerNum: state,
+          send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+          // headers: {
+          //   accessToken: localStorage.getItem("accessToken"),
+          // },
+        }
+      )
+      .then((response) => {
+        alert("메세지 전송 성공");
+      })
+      .catch((err) => {
+        console.log(err);
+        //window.location.href = "/mzbeeper/error";
+      });
   };
 
   const deleteAll = () => {
@@ -105,12 +116,7 @@ const WriteMsg = () => {
             <button onClick={deleteAll} className="send_cancle_btn">
               {"지우기"}
             </button>
-            <button
-              onClick={() => {
-                alert("hi!");
-              }}
-              className="direct_btn"
-            >
+            <button onClick={onMsgSubmit} className="direct_btn">
               {"SEND"}
             </button>
           </div>
