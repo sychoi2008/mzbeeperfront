@@ -27,7 +27,7 @@ const WriteMsg = () => {
       .post(
         "http://localhost:8080/mzbeeper/send/msg",
         {
-          msg: inputNum,
+          msg: inputNum.toString(),
           readerNum: state,
           send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
         },
