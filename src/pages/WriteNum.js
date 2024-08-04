@@ -8,7 +8,13 @@ const WriteNum = () => {
   const navigator = useNavigate();
 
   const nextPage = () => {
-    navigator("/mzbeeper/writemsg", { state: inputNum });
+    if (inputNum == "") {
+      alert("번호를 입력하시오");
+    } else if (inputNum.length < 5) {
+      alert("번호는 5자리로 입력하시오");
+    } else {
+      navigator("/mzbeeper/writemsg", { state: inputNum });
+    }
   };
 
   const [inputNum, setInputNum] = useState("");

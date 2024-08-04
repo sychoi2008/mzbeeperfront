@@ -16,37 +16,43 @@ const WriteMsg = () => {
 
   // 버튼을 누르면 숫자가 input 창에 띌
   const revealNum = (e) => {
-    setInputNum((prev) => prev + e.target.value);
+    if (inputNum.length < 10) {
+      setInputNum((prev) => prev + e.target.value);
+    }
   };
 
   //메세지 전송
   const onMsgSubmit = () => {
     // jwt token과 함께 보내기
     // 실패하면 로그인 화면(첫화면)으로 강제로 보내기
-    api
-      .post(
-        "http://localhost:8080/mzbeeper/send/msg",
-        {
-          msg: inputNum.toString(),
-          readerNum: state,
-          send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    if (inputNum.length == 0) {
+      alert("메세지를 입력하시오");
+    } else {
+      api
+        .post(
+          "http://localhost:8080/mzbeeper/send/msg",
+          {
+            msg: inputNum.toString(),
+            readerNum: state,
+            send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
           },
-          // headers: {
-          //   accessToken: localStorage.getItem("accessToken"),
-          // },
-        }
-      )
-      .then((response) => {
-        alert("메세지 전송 성공");
-      })
-      .catch((err) => {
-        console.log(err);
-        //window.location.href = "/mzbeeper/error";
-      });
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+            // headers: {
+            //   accessToken: localStorage.getItem("accessToken"),
+            // },
+          }
+        )
+        .then((response) => {
+          alert("메세지 전송 성공");
+        })
+        .catch((err) => {
+          console.log(err);
+          //window.location.href = "/mzbeeper/error";
+        });
+    }
   };
 
   const deleteAll = () => {

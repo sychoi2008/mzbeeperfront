@@ -8,6 +8,7 @@ import axios from "axios";
 const MsgDict = () => {
   const [searchNum, setSearchNum] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [showNull, setShowNull] = useState(false);
 
   const [msgMeant, setMsgMeant] = useState("");
 
@@ -24,10 +25,13 @@ const MsgDict = () => {
         console.log(response.data);
 
         setShowResult(true);
+        setShowNull(false);
         setMsgMeant(response.data);
       })
       .catch((err) => {
         console.log(err);
+        setShowNull(true);
+        setShowResult(false);
       });
   };
   return (
@@ -50,6 +54,11 @@ const MsgDict = () => {
           <div className="searchResult">
             <p className="msgNumber">{msgMeant.dict_msg}</p>
             <p className="msgMeant">{msgMeant.dict_meant}</p>
+          </div>
+        )}
+        {showNull && (
+          <div className="showNullERROR">
+            <p>결과가 없습니다</p>
           </div>
         )}
       </div>
