@@ -1,3 +1,5 @@
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/5FP/image/68tD-vKX1Xyt9C72kpjE5WnOcqY.jpg">
+출처 : https://m.post.naver.com/viewer/postView.naver?volumeNo=36101688&memberNo=176187
 ## 📟 MZ Beeper(Front) 
 > 현재 한국은 Y2K, 뉴트로, 레트로붐, 복고주의가 너무나 대중적인 문화가 되었다. <br>
 > 이 프로젝트는 그 흐름을 차용하여 80~90년대 선풍적인 인기를 얻었던 삐삐를 인터넷 웹으로 재구현한 레트로 프로젝트이다. <br>
