@@ -10,7 +10,7 @@ const MyBeeper = () => {
   const [myMsg, setMyMsg] = useState("");
   const getMyMsg = () => {
     api
-      .get("http://localhost:8080/mybeeper/getmymsg", {
+      .get("http://localhost:8080/mzbeeper/mymsg", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },

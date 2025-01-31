@@ -18,7 +18,7 @@ const MyPage = () => {
       .then((response) => {
         console.log(response);
         setName(response.data.name);
-        setNum(response.data.beep_num);
+        setNum(response.data.beeperNum);
       })
       .catch((err) => {
         console.log(err);
@@ -26,10 +26,15 @@ const MyPage = () => {
   }, []);
 
   const logOut = () => {
-    localStorage.removeItem("accessToken"); // 삭제
-    localStorage.removeItem("refreshToken");
-
-    window.location.href = "/mzbeeper";
+    api
+      .get("http://localhost:8080/mzbeeper/logout")
+      .then(() => {
+        localStorage.removeItem("accessToken"); // 삭제
+        window.location.href = "/mzbeeper";
+      })
+      .catch((error) => {
+        console.error("로그아웃 오류:", error);
+      });
   };
 
   return (
@@ -39,7 +44,7 @@ const MyPage = () => {
       </div>
       <div className="my_info_area">
         <h3>{name}</h3>
-        <h3>{num}</h3>
+        <h3>📟 {num}</h3>
       </div>
       <hr />
       <div className="mypage_msg_area">

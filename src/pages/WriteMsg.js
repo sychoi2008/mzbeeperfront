@@ -29,22 +29,11 @@ const WriteMsg = () => {
       alert("메세지를 입력하시오");
     } else {
       api
-        .post(
-          "http://localhost:8080/mzbeeper/send/msg",
-          {
-            msg: inputNum.toString(),
-            readerNum: state,
-            send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-            },
-            // headers: {
-            //   accessToken: localStorage.getItem("accessToken"),
-            // },
-          }
-        )
+        .post("http://localhost:8080/mzbeeper/msg", {
+          msg: inputNum.toString(),
+          readerNum: state,
+          send_date: moment().format("YYYY-MM-DDTHH:mm:ss"),
+        })
         .then((response) => {
           alert("메세지 전송 성공");
         })

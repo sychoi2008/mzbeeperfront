@@ -17,7 +17,7 @@ const MySendMsg = () => {
 
   useEffect(() => {
     api
-      .get("http://localhost:8080/mzbeeper/mypage/sendmsglist", {
+      .get("http://localhost:8080/mzbeeper/myinfo/mysentlist", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -64,7 +64,7 @@ const MySendMsg = () => {
         {mySendArr.map((it) => (
           <div>
             {isEdit && <input className="select_btn" type="checkbox" />}
-            <div className="msg_area" key={it.msg_id}>
+            <div className="msg_area" key={it.msgId}>
               <p className="send_time">Date : {it.create_date}</p>
               <p className="receiver">To : {it.readerNum}</p>
               <p className="send_msg">{it.msg}</p>

@@ -15,6 +15,7 @@ import MyGetMsg from "./pages/MyGetMsg.js";
 import WriteMsg from "./pages/WriteMsg.js";
 
 import Error from "./pages/Error.js";
+import AddMsgDict from "./pages/AddMsgDict.js";
 
 function App() {
   return (
@@ -30,9 +31,10 @@ function App() {
           <Route path="/mybeeper" element={<MyBeeper />} />
           <Route path="/mzbeeper/writenum" element={<WriteNum />} />
           <Route path="/mzbeeper/writemsg" element={<WriteMsg />} />
-
           <Route path="/mzbeeper/dict" element={<MsgDict />} />
-          <Route path="mzbeeper/mypage" element={<MyPage />} />
+          <Route path="/mzbeeper/dict/add" element={<AddMsgDict />} />{" "}
+          {/* ✅ 추가된 라우트 */}
+          <Route path="/mzbeeper/mypage" element={<MyPage />} />
         </Routes>
 
         <Routes>

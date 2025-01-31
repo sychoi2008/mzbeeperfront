@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./css/SignUp.css";
-import { SHA256 } from "crypto-js";
+import CryptoJS from "crypto-js";
 import axios from "axios";
 import moment from "moment";
 import "moment/locale/ko";
@@ -38,13 +38,14 @@ const SignUp = () => {
     const finalPwd = pwd + salt;
 
     //pwd hashing
-    const hash = SHA256(finalPwd).toString();
+    const hash = CryptoJS.SHA256(finalPwd).toString(CryptoJS.enc.Hex);
 
     console.log("hash", hash);
+    console.log(moment().format("YYYY-MM-DDTHH:mm:ss"));
 
     //server로는 salt와 hash value가 전달되어야 한다.
     axios
-      .post("http://localhost:8080/mzbeeper/regist", {
+      .post("http://localhost:8080/mzbeeper/save", {
         name: name,
         id: beepId,
         hash_pwd: hash,

@@ -22,17 +22,23 @@ const Login = () => {
 
   const onLoginSubmit = () => {
     axios
-      .post("http://localhost:8080/mzbeeper/login", {
-        userId: loginId,
-        userPwd: loginPwd,
-      })
+      .post(
+        "http://localhost:8080/mzbeeper/login",
+        {
+          userId: loginId,
+          userPwd: loginPwd,
+        },
+        {
+          withCredentials: true, // ✅ Refresh Token을 쿠키에 저장하도록 설정
+        }
+      )
       .then((response) => {
         console.log(response);
 
         // https://developer-ping9.tistory.com/235
         console.log("accessToken", response.headers.accesstoken);
         localStorage.setItem("accessToken", response.headers.accesstoken);
-        localStorage.setItem("refreshToken", response.headers.refreshtoken);
+        //localStorage.setItem("refreshToken", response.headers.refreshtoken);
         window.location.href = "/mybeeper";
       })
       .catch((err) => {
