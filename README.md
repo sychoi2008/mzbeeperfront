@@ -23,4 +23,4 @@
 ## 🔗 バックエンドリポジトリ
 
 バックエンドのソースコードはこちらをご参照ください。  
-👉 [Bottle Diary - Backend](https://github.com/sychoi2008/mzbeeperserver)
+👉 [Bottle Diary - Backend](https://github.com/sychoi2008/mzbeeperback)
